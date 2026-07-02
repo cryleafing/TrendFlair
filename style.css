@@ -117,6 +117,25 @@ h1, h2, h3, .logo {
     box-shadow: 0 6px 15px rgba(255, 94, 148, 0.4); /* pink glow */
 }
 
+.promo-banner {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.5rem;
+    overflow: hidden; /* hides the text that slides off-screen */
+    white-space: nowrap; /* forces text to stay on one line */
+}
+
+.scrolling-text {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.9rem;
+    animation: scroll-left 20s linear infinite; 
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
 /* --- Shop Layout --- */
 .shop-container {
     padding: 4rem 5%;
@@ -194,6 +213,70 @@ h1, h2, h3, .logo {
     cursor: pointer;
     border-radius: 8px;
     transition: all 0.3s ease;
+}
+
+/* --- About Page Styles --- */
+
+.about-hero {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+    border-bottom: 8px solid var(--accent-color);
+}
+
+.about-hero h1 {
+    font-size: 2.8rem;
+    font-style: italic;
+}
+
+.about-container {
+    padding: 4rem 5%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.about-text h2 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+/* The Portfolio Brag Box */
+.tech-stack-box {
+    background-color: var(--card-bg);
+    border: 2px dashed #d1c4c9;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(74, 21, 75, 0.05);
+}
+
+.tech-stack-box h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.tech-stack-box ul {
+    list-style-position: inside;
+    margin-top: 1rem;
+    color: var(--primary-color);
+}
+
+.tech-stack-box li {
+    margin-bottom: 0.8rem;
 }
 
 /* --- Footer --- */
